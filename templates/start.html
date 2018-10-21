@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+    NBA 数据分析启动
+{% endblock %}
+
+{% block page_content %}
+    {{ wtf.quick_form(form) }}
+    {% if team_data %}
+{#        {% for item in team_info_list %}#}
+{#            <li>{{ item }}</li>#}
+{#        {% endfor %}#}
+        {{ team_data }}
+    {% endif %}
+{% endblock %}

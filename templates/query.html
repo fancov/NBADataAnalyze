@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+    查询数据库中的数据
+{% endblock %}
+
+{% block page_content %}
+    {{ wtf.quick_form(form) }}
+    {% if team_info_list %}
+        {% for item in team_info_list %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
